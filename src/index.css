@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@498&family=Exo:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@498&family=Exo:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "tailwindcss";
+
+@theme{
+  --color-blackStandard:#07090a;
+  --color-buttonBlack:#272629;
+  --color-backGround:#f5f7fa;
+  --color-genericBlack:#4a494d;
+  --font-righteous:"Righteous","sans-serif";
+  --font-poppins:"Poppins","sans-serif";
+  --font-inter:"Inter", "sans-serif";
+}
+
+html,body{
+  box-sizing: border-box;
+  background-color: #f5f7fa;
+  /* filter: brightness(20%); */
+}
+
+.silverGradient{
+  background-image: url("./assets/silverBackground.jpg");
+  background-position: left;
+  color:transparent;
+  background-clip: text;
+}
+
+.silverGradient2{
+  background-image: url("./assets/silverBackground5.jpg");
+  background-position: left;
+  color:transparent;
+  background-clip: text;
+}
+
+.silverGradientNormal{
+  background-image: url("./assets/silverBackground5.jpg");
+  background-position: left;
+  background-size: cover;
+}
+
+.silverGradientNormal2{
+  background-image: url("./assets/silverBackground6.jpg");
+  background-size: cover;
+}
+
+.geminiGradientNormal{
+  background-image: url("./assets/Gemini.jpg");
+  background-position: left;
+  background-size: cover;
+}
+
+.geminiLogoGradient{
+  background: hsla(220, 85%, 62%, 1);
+
+background: linear-gradient(0deg, hsla(220, 85%, 62%, 1) 0%, hsla(351, 58%, 62%, 1) 100%);
+
+background: -moz-linear-gradient(0deg, hsla(220, 85%, 62%, 1) 0%, hsla(351, 58%, 62%, 1) 100%);
+
+background: -webkit-linear-gradient(0deg, hsla(220, 85%, 62%, 1) 0%, hsla(351, 58%, 62%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4A81F0", endColorstr="#D66778", GradientType=1 );
+  background-clip: text;
+  color:transparent
+}
+
+.logInSignUpBackground{
+  background-image: url("./assets//loginBackground.jpg");
+  background-size: contain;
+  /* filter: brightness(80%); */
+}
+
+.noScrollbar::-webkit-scrollbar {
+  display: none;
+}
