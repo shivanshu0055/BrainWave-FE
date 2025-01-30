@@ -56,7 +56,7 @@ const HeroSection = () => {
   })
 
   return (
-    <div className='h-screen bg-blackStandard mt-2 rounded-2xl w-[99%] mx-auto font-poppins relative'>
+    <div className='h-screen bg-blackStandard mt-2 rounded-lg w-[99%] mx-auto font-poppins relative'>
     <div className='py-14 sm:py-18'>
       <div className='rounded-2xl w-fit bg-[#4a494d]/80 mx-auto text-sm sm:text-base px-3 py-1 text-white/80 '>
         Welcome to your virtual brain ✧
