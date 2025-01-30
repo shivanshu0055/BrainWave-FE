@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className='text-2xl font-bold sm:text-4xl p-auto silverGradient'>
           BrainWave 🗲
         </div>
-        <div className='flex gap-3 items-center justify-center'>
+        <div className='flex gap-2 md:gap-3 items-center justify-center'>
           {!isLoggedIn ? <>
           <div className='cursor-pointer' onClick={()=>{navigate("/signin")}}> <Button text="Sign In" theme="light" variant="medium"></Button></div>
           <div className='cursor-pointer' onClick={()=>{navigate("/signup")}}> <Button text="Get Started" theme="light" variant="medium"></Button></div>

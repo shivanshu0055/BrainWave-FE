@@ -7,7 +7,7 @@ const themeCSS={
 
 const variants={
     "small":"text-sm px-4 py-1 sm:text-base rounded-md",
-    "medium":"text-xs px-4 py-1 sm:text-sm md:text-base rounded-md",
+    "medium":"text-xs px-2 md:px-4 py-1 sm:text-sm md:text-base rounded-md",
     "large":"text-base sm:text-lg px-4 py-2 rounded-lg"
 }
 
