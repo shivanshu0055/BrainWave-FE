@@ -33,7 +33,7 @@ const MainAppHome = () => {
         scale:0.0, 
         transformOrigin:"left", 
         opacity:0,
-        duration:1,
+        duration:0.7,
         stagger:0.1
       })
     }
