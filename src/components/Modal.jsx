@@ -10,6 +10,7 @@ import axios from 'axios'
 import Plus from '../svgs/Plus'
 // import Loader from './LoadingProcess'
 import LoaderProcess from './LoadingProcess'
+import { ToastContainer,toast } from 'react-toastify'
 
 const Modal = () => {
 
@@ -51,14 +52,13 @@ const Modal = () => {
                 }
             })
             setAllMems((prev)=>[...prev,newMemory.data.NewMemory])
-            // console.log(newMemory.data.NewMemory);
+            setModalOpen(false)
         }
         catch(error){
-            console.log(error);
-        }
-        finally{
+            toast.warn("Please enter a valid link")
+          }
+          finally{
             setIsLoading(false)
-            setModalOpen(false)
         }
         
     }
@@ -72,6 +72,7 @@ const Modal = () => {
             <Plus></Plus>
             </div>
         </div>
+        
           <div className='flex justify-center gap-4 '>
               <div onClick={()=>setSelectedTab("Youtube")} className={`text-white bg-red-400/70 flex justify-center items-center rounded-2xl inset-shadow-sm inset-shadow-white/80 cursor-pointer ${selectedTab=="Youtube"?"ring-4 ring-white/60":""}`}><Youtube2/></div>
               <div onClick={()=>setSelectedTab("Twitter")} className={`text-white bg-blue-400/70 flex justify-center items-center rounded-2xl inset-shadow-sm inset-shadow-white/80 cursor-pointer ${selectedTab=="Twitter"?"ring-4 ring-white/60":""}`}><Twitter2/></div>
@@ -105,7 +106,7 @@ const Modal = () => {
             </div>
           </div>
         </div>
-
+        <ToastContainer></ToastContainer>
       </div>}
       </>
   )
