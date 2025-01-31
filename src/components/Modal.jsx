@@ -91,19 +91,19 @@ const Modal = () => {
           <div className='w-full my-8'>
             <div className={`${selectedTab=="Note"?"hidden":""}`}>
               <div className="text-white mb-2" >Paste the link below </div>
-              <input ref={linkRef} className='bg-genericBlack/70 w-full rounded-md outline-none px-3 py-1 text-white/70' type="text" name="" id="" />
+              <input spellCheck="false" ref={linkRef} className='bg-genericBlack/70 w-full rounded-md outline-none px-3 py-1 text-white/70' type="text" name="" id="" />
             </div>
           </div>
           <div className='w-full my-4'>
             <div className={`${selectedTab=="Note"?"block":"hidden"}`}>
               <div className='text-white mb-2'>Add a Title note</div>
-              <input ref={titleRef} className='bg-genericBlack/70 w-full rounded-md outline-none px-3 py-1 text-white/70' type="text" name="" id="" />
+              <input spellCheck="false" ref={titleRef} className='bg-genericBlack/70 w-full rounded-md outline-none px-3 py-1 text-white/70' type="text" name="" id="" />
             </div>
           </div>
           <div className='w-full my-4'>
             <div className={`${selectedTab=="Note"?"block":"hidden"}`}>
               <div className='text-white mb-2'>Note</div>
-              <textarea ref={descriptionRef} className='bg-genericBlack/70 w-full rounded-md outline-none px-3 py-1 text-white/70 max-h-64 min-h-24' name="" id=""></textarea>
+              <textarea spellCheck="false" ref={descriptionRef} className='bg-genericBlack/70 w-full rounded-md outline-none px-3 py-1 text-white/70 max-h-64 min-h-24' name="" id=""></textarea>
             </div>
           </div>
           <div className='flex justify-center mb-2 font-semibold '>
