@@ -36,7 +36,7 @@ const SearchBar = () => {
           <div >Search</div>
           </div>
           </div>
-          <input ref={queryTab} placeholder='Ask Gemini about your memories ...' className='bg-[#4a494d]/50 caret-white inset-shadow-sm inset-shadow-white rounded-2xl h-11 w-full text-white/60 px-3 text-sm outline-none silverGradient2 hover:scale-x-101 hover:scale-y-102 duration-600 hover:border hover:border-blue-400' onInput={()=>{queryTab.current.scrollLeft=queryTab.current.scrollWidth}} type="text" name="" id="" />
+          <input ref={queryTab} placeholder='Search and ask AI about your memories ...' className=' bg-[#4a494d]/40  caret-white inset-shadow-sm inset-shadow-white rounded-2xl h-11 w-full text-white/70 px-3 text-sm outline-none hover:scale-x-101 hover:scale-y-102 duration-600 hover:border hover:border-blue-400 font-inter' type="text" name="" id="" />
           </div>
           <div className='hover:border hover:border-blue-400 bg-genericBlack/50 mt-3 inset-shadow-sm inset-shadow-white h-fit py-2 rounded-2xl mx-auto silverGradient2 px-2 text-center font-bold tracking-wider text-xl cursor-pointer hover:scale-x-103 hover:scale-y-102 duration-600' onClick={()=>setModalOpen((prev)=>!prev)}>
               ADD A NEW MEMORY 💨

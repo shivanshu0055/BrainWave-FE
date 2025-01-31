@@ -10,4 +10,9 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
+  <script>
+    [...document.querySelectorAll('div[type=text]')].forEach(el => {
+  el.scrollLeft = el.scrollWidth;
+})
+  </script>
 </html>

@@ -73,7 +73,7 @@ const Modal = () => {
   return (
     <>
     {modalOpen && <div className="h-screen w-full bg-genericBlack/60 fixed top-0 left-0 border border-black flex justify-center items-center z-10">
-        <div className='p-4 py-8 w-[90%] md:w-[60%] lg:w-[40%] bg-black/30 backdrop-blur-2xl h-fit rounded-2xl border-2 border-white/50 relative'>
+        <div className='p-4 py-8 w-[90%] md:w-[60%] lg:w-[40%] bg-black/30 backdrop-blur-2xl h-fit rounded-2xl border-2 border-white/50 relative duration-1000'>
         <div className='absolute top-8 left-1/2 -translate-x-1/2 -translate-y-1/10 sm:text-2xl text-xl text-white/80 font-semibold'>{selectedTab}</div>
         <div className='flex w-full justify-end h-6 mb-8 '>
             <div onClick={()=>setModalOpen(false)} className='rotate-45 cursor-pointer text-white/80'>
