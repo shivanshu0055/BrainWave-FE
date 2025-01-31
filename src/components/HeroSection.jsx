@@ -64,8 +64,8 @@ const HeroSection = () => {
       <div className='text-white/60 my-10 text-2xl w-fit mx-auto font-medium sm:text-4xl md:text-6xl sm:w-[65%] md:w-[50%] text-center '>
       Your<span className='silverGradient font-bold' ref={ref3}> Second Brain</span> Powered by <span className='silverGradient font-bold' ref={ref4}>AI</span>
       </div>
-      <div className='text-white/60 my-10 w-[80%] mx-auto text-sm text-center sm:text-lg sm:w-[50%]'>
-      Store, organize, and access your memories effortlessly—with AI that understands and adds more to your knowledge base
+      <div className='text-white/60 my-10 w-[80%] mx-auto text-sm text-center sm:text-lg md:text-xl sm:w-[60%] md:w-[50%] lg:w-[40%]'>
+      Store, organize, and recall your memories effortlessly with AI-powered insights and contextual Q&A
       </div>
       <div className='w-fit mx-auto cursor-pointer' onClick={()=>{
         if(localStorage.getItem("token")){
