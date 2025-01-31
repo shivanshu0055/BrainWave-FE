@@ -4,12 +4,8 @@ import { useRecoilState, useRecoilValue } from 'recoil'
 import Navbar from './Navbar'
 import MemoryCard from './MemoryCard'
 import { useNavigate } from 'react-router-dom'
-import Modal from './Modal'
 import axios from 'axios'
 import Loader from './LoadingScreen'
-import Gemini from '../svgs/Gemini'
-import Markdown from 'react-markdown'
-import { parse } from 'dotenv'
 import { marked } from 'marked'
 import gsap from 'gsap'
 import BackArrow from '../svgs/BackArrow'
@@ -24,17 +20,12 @@ const AfterSearchMainApp = () => {
     const ref2=useRef()
     const navigate=useNavigate()
     async function parseToFormattedText(geminiResponse){
-      // console.log(geminiResponse);
       const htmlString =await marked(geminiResponse);
-      // console.log(htmlString);
       ref1.current.innerHTML=htmlString
-    
     }
-
 
     async function getRelatedMemories(){
         setIsLoading(true)
-        // console.log("Hello");
         document.body.style.overflow="hidden"
         const res=await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/getRelatedMemories`,{
             query:query},{
@@ -43,10 +34,8 @@ const AfterSearchMainApp = () => {
                 }
             }
         )
-        // console.log(res.data);
 
         if(res.data.topMemories.length!=0){
-            // console.log("More than 0");
         const geminiRes=await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/askGemini`,{
             prompt:`${query} and context of this is ${res.data.topMemories[0].title!="N/A"?res.data.topMemories[0].title:""}  ${res.data.topMemories[0].description!="N/A"?res.data.topMemories[0].description:""}`
         },{
@@ -55,12 +44,10 @@ const AfterSearchMainApp = () => {
             }
         })
         setGeminiAnswer(geminiRes.data.Response)
-        // console.log(geminiAnswer);
         }
         else{
           setIsLoading(false)
         }
-        // console.log(res.data.topMemories);
         setFiltertedMems(res.data.topMemories)
     }    
 
@@ -84,7 +71,6 @@ const AfterSearchMainApp = () => {
       
     async function main(){
       await getRelatedMemories()
-      // await parseToFormattedText(geminiAnswer)
     } 
     
     useEffect(()=>{
@@ -97,9 +83,6 @@ const AfterSearchMainApp = () => {
          })
     },[])
     
-    // useEffect(()=>{
-
-    // },[])
 
   return (
     <div> 
@@ -127,8 +110,7 @@ const AfterSearchMainApp = () => {
             </div>
           </div>
             <div ref={ref1} className='overflow-x-hidden overflow-y-auto '>
-            {/* {geminiAnswer.map((word)=><Markdown>{word}</Markdown>)} */}
-            {/* Nothing to render */}
+
             </div>
             </div>
         </div>
@@ -161,7 +143,7 @@ const AfterSearchMainApp = () => {
         { geminiAnswer=="" && <div ref={ref2} className='silverGradient w-full py-3 px-4 mx-auto text-7xl md:w-[80%] md:text-8xl md:leading-20 leading-16 font-semibold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-righteous tracking-wider'>
                 Unable to find related memories try to use more specific keywords
           </div>}
-      {/* MODAL */}
+          
     </div>
   )
 }
