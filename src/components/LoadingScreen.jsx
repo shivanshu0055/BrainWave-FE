@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Loader = () => {
   return (
-    <div className='h-screen w-full absolute left-0 top-0 text-white bg-black z-20' >
+    <div className='h-[100vh] w-full absolute left-0 top-0 text-white bg-black z-20 overflow-hidden' >
         <div className='top-1/2 relative '>
     <StyledWrapper>
       <div className='flex justify-center'>

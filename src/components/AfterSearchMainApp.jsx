@@ -53,14 +53,14 @@ const AfterSearchMainApp = () => {
 
     async function injectHtml(){
       await parseToFormattedText(geminiAnswer);
-      setIsLoading(false)
       document.body.style.overflow=""
       gsap.from(ref1.current.children,{
         opacity:0,
         duration:0.6,
         stagger:0.4,
         delay:0.2
-       })
+      })
+      setIsLoading(false)
     }
 
     useEffect(() => {
