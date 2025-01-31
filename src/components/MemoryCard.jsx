@@ -75,7 +75,7 @@ const MemoryCard = ({title,imageUrl,description,creationTime,creationDate,bookMa
         {/* Go to URL section */}
         {
             (type=="Twitter" || type=="Website") &&  <div className='my-4 text-sm text-white font-semibold'>
-                <a href={link} className='underline'>Click to go to {type}</a>
+                <a href={link} className='underline' target="_blank">Click to go to {type}</a>
             </div> 
         }
 
@@ -88,7 +88,7 @@ const MemoryCard = ({title,imageUrl,description,creationTime,creationDate,bookMa
               }
               {
                 type=="Website" && imageUrl!="N/A" && <div className='w-full my-4'>
-                <a href={link}> <img className='h-[100%] w-[100%] object-cover rounded-lg' src={imageUrl} alt="" /></a>
+                <a href={link} target="_blank">  <img className='h-[100%] w-[100%] object-cover rounded-lg' src={imageUrl} alt="" /></a>
                 </div>
               }
               {

@@ -9,6 +9,9 @@ import Share from '../svgs/Share'
 import Twitter from '../svgs/Twitter'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import Youtube2 from '../svgs/Youtube2'
+import Youtube from '../svgs/Youtube'
+import Youtube3 from '../svgs/Youtube3'
 gsap.registerPlugin(ScrollTrigger)
 
 const FeatureSection = () => {
@@ -53,29 +56,13 @@ const FeatureSection = () => {
 
         </div>
        
-        <div className='md:flex gap-7'>
-        <FeatureCard
-        title="Sharing of your brain"
-        color="yellow"
-        text="Seamlessly Share Your Insights and Memories
-        Connect and Collaborate with Friends and Family"
-        icon={<Share/>}
-        ></FeatureCard>
-
-        <FeatureCard
-        title="Bookmark your favourite memories"
-        color="red"
-        text="Easily Save and Organize Your favourite Moments
-        With Just One Click, Keep Your favorites and most frequently used ones Close"
-        icon={<Bookmark/>}></FeatureCard>
-        </div>
 
         <div className='md:flex  gap-7'>
         <FeatureCard
-        title="Smart preview for Youtube and Tweets"
-        color="blue"
-        text="Automatically fetch and display rich previews for YouTube videos and Tweets when links are saved. Users can watch videos directly or view embedded Tweets without leaving the app"
-        icon={<Twitter/>}
+        title="Smart preview for Youtube and Websites"
+        color="red"
+        text="Automatically fetch and display rich previews for YouTube videos and Websites when links are saved. Users can watch videos directly or view embedded websites without leaving the app"
+        icon={<Youtube3/>}
         ></FeatureCard>
 
         <FeatureCard
@@ -87,7 +74,16 @@ const FeatureSection = () => {
         ></FeatureCard>
 
         </div> 
-        
+        <div className='md:flex gap-7'>
+
+        <FeatureCard
+        title="Bookmark your favourite memories"
+        color="blue"
+        text="Easily Save and Organize Your favourite Moments
+        With Just One Click, Keep Your favorites and most frequently used ones Close"
+        icon={<Bookmark/>}></FeatureCard>
+        </div>
+
     </div>
   )
 }
