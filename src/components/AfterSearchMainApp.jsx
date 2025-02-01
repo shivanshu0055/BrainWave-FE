@@ -87,12 +87,12 @@ const AfterSearchMainApp = () => {
   return (
     <div> 
       <Navbar></Navbar>
-      <div onClick={()=>{
+      <div  className='pt-5 bg-blackStandard'>
+        <div className='font-poppins cursor-pointer w-fit bg-blackStandard text-white/80 inset-shadow-sm inset-shadow-white items-center rounded-full flex gap-2 ml-3 px-3 py-1 lg:ml-6' >
+          <div onClick={()=>{
         navigate("/home")
         setQuery("")
-      }} className='pt-5 bg-blackStandard'>
-        <div className='font-poppins cursor-pointer w-fit bg-blackStandard text-white/80 inset-shadow-sm inset-shadow-white items-center rounded-full flex gap-2 ml-3 px-3 py-1 lg:ml-6' >
-          <div className='h-8 w-8 flex justify-center items-center '>
+      }} className='h-8 w-8 flex justify-center items-center '>
           <BackArrow></BackArrow>
           </div>
           <div>

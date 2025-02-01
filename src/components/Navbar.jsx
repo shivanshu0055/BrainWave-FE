@@ -10,7 +10,7 @@ const Navbar = () => {
   const setAllMems=useSetRecoilState(allMemories)
 
   return (
-    <div className={` bg-blackStandard flex justify-between ${isLoggedIn?"":"my-2 w-[99%] rounded-md"}  font-poppins py-5 shadow mx-auto px-4`} >
+    <div className={` bg-blackStandard flex justify-between font-poppins py-5 mx-auto px-4`} >
         <div className='text-2xl font-bold sm:text-4xl p-auto silverGradient'>
           BrainWave 🗲
         </div>

@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 @theme{
-  --color-blackStandard:#07090a;
+  --color-blackStandard:#141414;
   --color-buttonBlack:#272629;
   --color-backGround:#f5f7fa;
   --color-genericBlack:#4a494d;
@@ -41,6 +41,7 @@ html,body{
 .silverGradientNormal2{
   background-image: url("./assets/silverBackground6.jpg");
   background-size: cover;
+  /* background-position: right; */
 }
 
 .geminiGradientNormal{

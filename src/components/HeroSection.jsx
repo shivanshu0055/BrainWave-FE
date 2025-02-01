@@ -56,12 +56,12 @@ const HeroSection = () => {
   })
 
   return (
-    <div className='h-screen bg-blackStandard mt-2 rounded-lg w-[99%] mx-auto font-poppins relative'>
+    <div className='h-screen bg-blackStandard mx-auto font-poppins relative border-t border-white/60'>
     <div className='py-14 sm:py-18'>
       <div className='rounded-2xl w-fit bg-[#4a494d]/80 mx-auto text-sm sm:text-base px-3 py-1 text-white/80 '>
         Welcome to your virtual brain ✧
       </div>
-      <div className='text-white/60 my-10 text-2xl w-fit mx-auto font-medium sm:text-4xl md:text-6xl sm:w-[65%] md:w-[50%] text-center '>
+      <div className=' text-white/60 my-10 text-2xl w-fit mx-auto font-medium sm:text-4xl md:text-7xl sm:w-[65%] md:w-[50%] text-center '>
       Your<span className='silverGradient font-bold' ref={ref3}> Second Brain</span> Powered by <span className='silverGradient font-bold' ref={ref4}>AI</span>
       </div>
       <div className='text-white/60 my-10 w-[80%] mx-auto text-sm text-center sm:text-lg md:text-xl sm:w-[60%] md:w-[50%] lg:w-[40%]'>
