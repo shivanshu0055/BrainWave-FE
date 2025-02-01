@@ -48,6 +48,7 @@ html,body{
   background-image: url("./assets/Gemini.jpg");
   /* background-position: left; */
   background-size: contain;
+  background-repeat: repeat-x;
   color: white;
 }
 
