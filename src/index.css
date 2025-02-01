@@ -46,8 +46,9 @@ html,body{
 
 .geminiGradientNormal{
   background-image: url("./assets/Gemini.jpg");
-  background-position: left;
-  background-size: cover;
+  /* background-position: left; */
+  background-size: contain;
+  color: white;
 }
 
 .geminiLogoGradient{
