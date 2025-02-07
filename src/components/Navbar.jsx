@@ -5,6 +5,7 @@ import { useSetRecoilState } from 'recoil'
 import { allMemories } from '../../atoms'
 
 const Navbar = () => {
+  
   const navigate=useNavigate()
   const isLoggedIn=localStorage.getItem("token")
   const setAllMems=useSetRecoilState(allMemories)
