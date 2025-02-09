@@ -51,9 +51,9 @@ const SignUp = () => {
     return (
       <div className='bg-[#030303] h-screen w-full flex justify-center lg:justify-normal items-center font-poppins  overflow-hidden'>
         <div className='lg:w-[45%] relative flex justify-center'>
-        <div className='w-34 h-34 silverGradientNormal  absolute rounded-full top-[-10%] left-[73%] shadow-md '></div>
-        <div className='w-20 h-20 silverGradientNormal absolute rounded-full top-[92%] left-[20%] shadow-md '></div>
-        <div className='w-20 h-20 silverGradientNormal absolute rounded-full top-[70%] left-[60%] shadow-md '></div>
+        <div className='w-34 h-34 silverGradientNormal  absolute rounded-full top-[-10%] left-[73%] shadow-md lg:hidden'></div>
+        <div className='w-20 h-20 silverGradientNormal absolute rounded-full top-[92%] left-[20%] shadow-md lg:hidden'></div>
+        <div className='w-20 h-20 silverGradientNormal absolute rounded-full top-[70%] left-[60%] shadow-md lg:hidden'></div>
         <ToastContainer draggable="true" theme='light'/>
         <div className='w-96 bg-white/30 relative backdrop-blur-xs rounded-lg py-16 px-3 text-white border border-white/50'>
             <div className='text-3xl font-semibold'>
