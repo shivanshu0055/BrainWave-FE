@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Button from './button'
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
@@ -12,10 +12,18 @@ import EyeOpen from '../svgs/EyeOpen';
 import LoaderProcess from './LoadingProcess';
 
 const SignIn = () => {
+
+  const navigate=useNavigate()
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      navigate("/");
+    }
+  }, []);
+
   const usernameRef=useRef()
   const passwordRef=useRef()
   const setAllMems=useSetRecoilState(allMemories)
-  const navigate=useNavigate()
   const [seePass,setSeePass]=useState(false)
   const [isLoading,setIsLoading]=useState(false)
   async function doSignIn(){

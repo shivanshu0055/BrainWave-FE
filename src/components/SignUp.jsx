@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Button from './button'
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -7,12 +7,19 @@ import image from "./../assets/image.png"
 import EyeClose from '../svgs/EyeClose';
 import EyeOpen from '../svgs/EyeOpen';
 import LoaderProcess from './LoadingProcess';
+
 const SignUp = () => {
+  const navigate=useNavigate()
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      navigate("/");
+    }
+  }, []);
 
   const usernameRef=useRef()
     const passwordRef=useRef()
     const [seePass,setSeePass]=useState(false)
-    const navigate=useNavigate()
     const [isLoading,setIsLoading]=useState(false)
     // console.log(process.env.BACKEND_URL);
     
