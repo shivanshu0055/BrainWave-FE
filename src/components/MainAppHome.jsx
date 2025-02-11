@@ -56,7 +56,7 @@ const MainAppHome = () => {
       <div className='min-h-screen bg-blackStandard mx-auto py-8 font-poppins'>
 
         <SearchBar></SearchBar>
-        <div className='columns-1 sm:columns-2 sm:gap-3 px-4 my-10 md:columns-3 md:gap-4 lg:columns-4 lg:gap-5'>
+        <div className='columns-1 sm:columns-2 sm:gap-4 px-4 my-10 md:columns-3 md:gap-5 lg:columns-4 lg:gap-6'>
           
           <div ref={ref1}>
           {

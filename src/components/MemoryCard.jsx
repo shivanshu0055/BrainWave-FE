@@ -9,10 +9,10 @@ import { allMemories } from '../../atoms'
 import axios from 'axios'
 
 const colorScheme={
-    "Youtube":"bg-[#3d5a80]",
-    "Note":"bg-[#3d5a80]",
-    "Twitter":"bg-[#3d5a80]",
-    "Website":"bg-[#3d5a80]"
+    "Youtube":"bg-[#D2665A]",
+    "Note":"bg-[#FF884B]",
+    "Twitter":"bg-[#578FCA]",
+    "Website":"bg-[#5D8736]"
 }
 
 const MemoryCard = ({title,imageUrl,description,creationTime,creationDate,bookMark,link,type,objectId,showExtras}) => {
@@ -65,7 +65,7 @@ const MemoryCard = ({title,imageUrl,description,creationTime,creationDate,bookMa
         setAllMems((prev)=>prev.filter((mems)=>mems._id!=objectId))
     }
   return(
-    <div className={`mb-3 md:mb-4 xl:mb-5 break-inside-avoid h-fit rounded-xl ${colorScheme[type]} inset-shadow-sm inset-shadow-white/50 px-2 sm:px-4 py-5 text-[#f1dac4] `}>
+    <div className={`mb-5 md:mb-6 xl:mb-7 break-inside-avoid h-fit rounded-2xl ${colorScheme[type]} inset-shadow-sm inset-shadow-white/50 px-2 sm:px-4 py-5 text-white `}>
         {/* Title Section */}
             <div className='flex'> 
               <div className='w-[93%] text-lg font-semibold overflow-x-auto overflow-y-scroll noScrollbar break-words pr-2' >{type=="Youtube" || type=="Note"?title:type}</div>
@@ -74,7 +74,7 @@ const MemoryCard = ({title,imageUrl,description,creationTime,creationDate,bookMa
 
         {/* Go to URL section */}
         {
-            (type=="Twitter" || type=="Website") &&  <div className='my-4 text-sm text-[#e0fbfc] font-semibold'>
+            (type=="Twitter" || type=="Website") &&  <div className='my-4 text-sm text-white font-semibold'>
                 <a href={link} className='underline' target="_blank">Click to go to {type}</a>
             </div> 
         }
@@ -92,18 +92,18 @@ const MemoryCard = ({title,imageUrl,description,creationTime,creationDate,bookMa
                 </div>
               }
               {
-                (type=="Website")  && <div className='my-4 font-inter text-sm text-[#e0fbfc] max-h-96 pr-2 break-words overflow-auto noScrollbar'>
+                (type=="Website")  && <div className='my-4 font-inter text-sm text-[white]/90 max-h-96 pr-2 break-words overflow-auto noScrollbar'>
                 {description=="N/A" ? title : description}
                 </div>
               }
               {
-                (type=="Note" || type=="Twitter")  && <div className='my-4 text-sm text-[#e0fbfc] max-h-96  pr-2 break-words overflow-auto noScrollbar'>
+                (type=="Note" || type=="Twitter")  && <div className='my-4 text-sm text-[white]/90 max-h-96  pr-2 break-words overflow-auto noScrollbar'>
                 {description}
                 </div>
               }
             {/* Footer Section */}
             <div className='flex mt-5 items-center'> 
-            <div className='w-[93%] text-xs overflow-hidden text-[#e0fbfc]' >
+            <div className='w-[93%] text-xs overflow-hidden text-[white]/80' >
               <div>Creation Date - {creationDate}</div>
               <div>Creation Time - {creationTime}</div>
             </div>

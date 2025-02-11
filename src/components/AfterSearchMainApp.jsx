@@ -102,11 +102,11 @@ const AfterSearchMainApp = () => {
       </div> 
       <div className='bg-blackStandard min-h-screen w-full mx-auto py-2 '>
       {geminiAnswer!="" && 
-      <div className=' px-4 py-6 max-h-[90vh] font-light overflow-y-scroll noScrollbar h-fit my-10 text-black/70 font-inter inset-shadow-sm inset-shadow-white rounded-lg mx-3 md:mx-4 lg:mx-6'>
+      <div className=' px-4 py-6 max-h-[90vh] font-light overflow-y-scroll h-fit my-10 text-black/70 font-inter inset-shadow-sm inset-shadow-white rounded-lg mx-3 md:mx-4 lg:mx-6'>
       <div className=' inset-shadow-sm inset-shadow-white geminiGradientNormal rounded-lg px-3 pb-3'>
           <div className='pt-6 pb-4 text-4xl font-poppins font-semibold flex gap-2 w-[100%] '>
             <div className='geminiLogoGradient w-fit'>
-            Gemini's Answer ✦
+            SecondBrain's Response ✦
             </div>
           </div>
             <div ref={ref1} className='overflow-x-hidden overflow-y-auto '>

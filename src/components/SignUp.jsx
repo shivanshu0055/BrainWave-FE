@@ -17,7 +17,7 @@ const SignUp = () => {
     }
   }, []);
 
-  const usernameRef=useRef()
+    const usernameRef=useRef()
     const passwordRef=useRef()
     const [seePass,setSeePass]=useState(false)
     const [isLoading,setIsLoading]=useState(false)
