@@ -101,7 +101,7 @@ const SignIn = () => {
       </div>  
       </div>
       <div className='hidden lg:w-[55%] h-screen silverGradientNormal2 lg:flex justify-center items-center bg-white/80'>
-        <div className='mx-4 p-2 inset-shadow-sm bg-blackStandard rounded-xl inset-shadow-white'>
+        <div className='mx-7 p-2 inset-shadow-sm bg-blackStandard rounded-xl inset-shadow-white'>
             <img src={image} className='h-[100%] w-[100%] object-cover rounded-xl' alt="" />
         </div>
       </div>
