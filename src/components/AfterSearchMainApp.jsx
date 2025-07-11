@@ -19,6 +19,7 @@ const AfterSearchMainApp = () => {
     const ref1=useRef()
     const ref2=useRef()
     const navigate=useNavigate()
+    
     async function parseToFormattedText(geminiResponse){
       const htmlString =await marked(geminiResponse);
       ref1.current.innerHTML=htmlString
