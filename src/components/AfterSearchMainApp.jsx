@@ -20,8 +20,8 @@ const AfterSearchMainApp = () => {
     const ref2=useRef()
     const navigate=useNavigate()
     
-    async function parseToFormattedText(geminiResponse){
-      const htmlString =await marked(geminiResponse);
+    function parseToFormattedText(geminiResponse){
+      const htmlString =marked(geminiResponse);
       ref1.current.innerHTML=htmlString
     }
 
@@ -52,13 +52,13 @@ const AfterSearchMainApp = () => {
         setFiltertedMems(res.data.topMemories)
     }    
 
-    async function injectHtml(){
-      await parseToFormattedText(geminiAnswer);
+    function injectHtml(){
+      parseToFormattedText(geminiAnswer);
       document.body.style.overflow=""
       gsap.from(ref1.current.children,{
         opacity:0,
         duration:0.6,
-        stagger:0.4,
+        stagger:0.2,
         delay:0.2
       })
       setIsLoading(false)

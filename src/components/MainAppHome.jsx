@@ -16,6 +16,7 @@ const MainAppHome = () => {
     const ref2=useRef()
     const unmarkMems=useRecoilValue(unmarkMemories)
     const setAllMems=useSetRecoilState(allMemories)
+    const allMems=useRecoilValue(allMemories)
     const [ isLoading,setIsLoading ]=useState(true)
 
     async function bringMems(){
@@ -26,26 +27,32 @@ const MainAppHome = () => {
         "authorization":localStorage.getItem("token")
         }
     })
-      await setAllMems(usersMems.data.allMemories)
+      setAllMems(usersMems.data.allMemories)
       setIsLoading(false)
       document.body.style.overflow=""
-      gsap.from(ref1.current.children,{
-        scale:0.0, 
-        transformOrigin:"left", 
-        opacity:0,
-        duration:0.7,
-        stagger:0.05
-      })
     }
     
+    useEffect(()=>{
+      if(ref1.current.children){
+      gsap.from(ref1.current.children,{
+              scale:0.0, 
+              transformOrigin:"left", 
+              opacity:0,
+              duration:0.7,
+              stagger:0.05
+            })
+      }
+    },[allMems])
 
     useEffect(()=>{
       bringMems()
-      gsap.from(ref2.current,{
-        y:100,
-        opacity:0,
-        duration:2.5,
-     })
+      if(ref2.current){
+        gsap.from(ref2.current,{
+          y:100,
+          opacity:0,
+          duration:2.5,
+        })
+    }
     },[])
 
   return (
