@@ -50,5 +50,5 @@ export const filteredMemories=atom({
 
 export const searchBarValue=atom({
     key:"searchBarValue",
-    default:""
+    default:" "
 })

@@ -48,28 +48,19 @@ background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, F
 }
 
 .geminiGradientNormal{
-  background: hsla(277, 79%, 84%, 1);
-
-  background: linear-gradient(90deg, hsla(277, 79%, 84%, 1) 0%, hsla(204, 95%, 77%, 1) 100%);
-  
-  background: -moz-linear-gradient(90deg, hsla(277, 79%, 84%, 1) 0%, hsla(204, 95%, 77%, 1) 100%);
-  
-  background: -webkit-linear-gradient(90deg, hsla(277, 79%, 84%, 1) 0%, hsla(204, 95%, 77%, 1) 100%);
-  
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#DDB4F6", endColorstr="#8DD0FC", GradientType=1 );  background-size: cover;
-  /* height: 100%; */
-  /* background-repeat: repeat-x; */
-  color: white;
+  background: #2d30c4;
+  background: linear-gradient(92deg,rgba(45, 48, 196, 1) 0%, rgba(207, 35, 69, 1) 100%);
+    color: white;
 }
 
 .geminiLogoGradient{
   background: hsla(220, 85%, 62%, 1);
 
-background: linear-gradient(0deg, hsla(220, 85%, 62%, 1) 0%, hsla(351, 58%, 62%, 1) 100%);
+background: linear-gradient(0deg, hsla(351, 58%, 62%, 1) 0%, hsla(351, 58%, 62%, 1) 100%);
 
-background: -moz-linear-gradient(0deg, hsla(220, 85%, 62%, 1) 0%, hsla(351, 58%, 62%, 1) 100%);
+background: -moz-linear-gradient(0deg, hsla(351, 58%, 62%, 1), hsla(351, 58%, 62%, 1) 100%);
 
-background: -webkit-linear-gradient(0deg, hsla(220, 85%, 62%, 1) 0%, hsla(351, 58%, 62%, 1) 100%);
+background: -webkit-linear-gradient(0deg, hsla(351, 58%, 62%, 1) 0%, hsla(351, 58%, 62%, 1) 100%);
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4A81F0", endColorstr="#D66778", GradientType=1 );
   background-clip: text;

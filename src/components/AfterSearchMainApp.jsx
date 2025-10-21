@@ -28,6 +28,7 @@ const AfterSearchMainApp = () => {
     async function getRelatedMemories(){
         setIsLoading(true)
         document.body.style.overflow="hidden"
+
         const res=await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/getRelatedMemories`,{
             query:query},{
                 headers:{
@@ -84,7 +85,6 @@ const AfterSearchMainApp = () => {
          })
     },[])
     
-
   return (
     <div> 
       <Navbar></Navbar>
@@ -101,6 +101,7 @@ const AfterSearchMainApp = () => {
           </div>
         </div>
       </div> 
+      
       <div className='bg-blackStandard min-h-screen w-full mx-auto py-2 '>
       {geminiAnswer!="" && 
       <div className=' px-4 py-6 max-h-[90vh] font-light overflow-y-scroll h-fit my-10 text-black/70 font-inter inset-shadow-sm inset-shadow-white rounded-lg mx-3 md:mx-4 lg:mx-6'>
